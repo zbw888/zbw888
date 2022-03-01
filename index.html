@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <include file="Public:header" />
+
+        <link rel="stylesheet" href="/Public/home/css/public.css" />
+
+        <link rel="stylesheet" href="/Public/home/css/slick.css" />
+
+        <link rel="stylesheet" href="/Public/home/css/module.css" />
+
+        <link rel="stylesheet" href="/Public/home/css/animate.css" />
+
+        <link rel="stylesheet" href="/Public/home/css/jquery.fullPage.css" />
+
+        <link rel="stylesheet" href="/Public/home/css/style.css" />
+
+        <link rel="stylesheet" href="/Public/home/css/style-rel.css" />
+
+    </head>
+
+<body>
+
+
+
+<div class="index">
+
+    <include file="Public:navig" />
+
+    <!-- /.header end !-->
+
+
+
+    <div id="fullPage">
+
+        <div class="section section1">
+
+            <div class="index_banner">
+
+            <volist name="banner" id="v" key="key">
+
+                <div class="item item3" style="background-image:url({$v['pic1']});">
+
+                    <if condition="$v['pic2'] neq ''"><img src="{$v['pic2']}" alt="" class="animated zoomIn" ani="animated zoomIn" ani-time="100"></if>
+
+                </div>
+
+			</volist>
+
+            </div>
+
+
+
+            <div class="index_banner_m">
+
+			<volist name="banners" id="v" key="key">
+
+                <div class="item" style="background-image:url({$v['pic3']});"></div>
+
+			</volist>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="mBgCover section section2"  style="background-image:url({$nav[0]['pic1']});">
+
+            <div class="wp">
+
+                <div class="m_tit animated " ani="animated fadeInDown" ani-time="100">
+
+                    <strong>产品中心</strong>
+
+                    <em>Product Centre</em>
+
+                </div>
+
+
+
+                <ul class="list_pic">
+
+				<volist name="product" id="v">
+
+                    <li class="list_pic_item animated " ani="animated zoomIn" ani-time="100">
+
+                        <a href="product.html?aid={$v['id']}" class="list_pic_box">
+
+                            <div class="list_pic_img" style="background-image:url({$v['pic1']});"></div>
+
+                            <span class="list_pic_tit">{$v['title']}</span>
+
+                            <div class="list_pic_txt">
+
+                                <p>{$v['desc']}</p>
+
+                            </div>
+
+                        </a>
+
+                    </li>
+
+				</volist>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="mBgCover section section3"  style="background-image:url({$nav[1]['pic1']});">
+
+            <div class="wp">
+
+                <div class="m_tit animated " ani="animated fadeInDown" ani-time="100">
+
+                    <strong>解决方案</strong>
+
+                    <em>solution</em>
+
+                </div>
+
+
+
+                <ul class="list_solution">
+
+				<volist name="scheme" id="v">
+
+                    <li class="list_solution_item animated " ani="animated fadeInDown" ani-time="100">
+
+                        <a href="scheme.html?aid={$v['id']}" class="list_solution_box">
+
+                            <div class="list_solution_img" style="background-image:url({$v['pic1']});"></div>
+
+                            <div class="list_solution_tit">{$v['title']}</div>
+
+                        </a>
+
+                    </li>
+
+				</volist>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="mBgCover section section4"  style="background-image:url({$nav[2]['pic1']});">
+
+            <div class="wp">
+
+                <div class="m_tit animated " ani="animated fadeInDown" ani-time="100">
+
+                    <strong>睿德久信</strong>
+
+                    <em>About us</em>
+
+                </div>
+
+
+
+                <div class="index_about">
+
+                    <div class="index_about_img animated " ani="animated fadeInLeft" ani-time="100"><img src="{$about['pic1']}" alt=""></div>
+
+                    <div class="index_about_txt animated " ani="animated fadeInRight" ani-time="100">
+
+                        <h3>{$about['title']}</h3>
+
+                        <p class="tid">{$about['desc']}</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="mBgCover section section6"  style="background-image:url({$nav[3]['pic1']});">
+
+            <div class="wp">
+
+                <div class="m_tit animated " ani="animated fadeInDown" ani-time="100">
+
+                    <strong>联系我们</strong>
+
+                    <em>Contact US</em>
+
+                </div>
+
+                
+
+                <div class="index_contactUs">
+
+                    <div class="index_contactUs_left">
+
+                        <img src="{$contact['pic1']}" alt="" class=" animated" ani="animated fadeInLeft" ani-time="100">
+
+
+
+                        <div class="index_contactUs_con animated" ani="animated fadeInUp" ani-time="100">
+
+                            <h3>{$seo['user']}</h3>
+
+							<div class="s5">
+
+							<volist name="contacts" id="v" key="key">
+
+                                <p>{$v['titles']}：{$v['add']}</p>
+
+							</volist>
+
+                            </div>
+
+                            <div class="s1"><p>Tel：{$contacts[0]['tel']}</p></div>
+
+                            <div class="s2"><p>Faxed：{$contacts[0]['chuanzhen']}</p></div>
+
+                            <div class="s4"><p>Postcode：{$contacts[0]['youbian']}</p></div>
+
+                            <div class="s6"><p>Website：{$seo['url']}</p></div>
+
+							<div class="s1"><p>Hotline：{$seo['tel']}{$seo['statis']}{$seo['custom']}</p></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="index_contactUs_right animated" ani="animated fadeInRight" ani-time="100">
+
+                        <!--<div>
+
+                            <img src="/Public/home/images/ewm.jpg" alt="">
+
+                            <em>微信公众号</em>
+
+                        </div>-->
+
+                        <div>
+
+                            <img src="{$seo['pic1']}" alt="">
+
+                            <em>{$seo['name_pic1']}</em>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- /.container end !-->
+
+
+
+    <div class="copy">
+
+        <em>Copyright:{$seo['copy']}</em>
+
+    <em>ICP Record number:{$seo['record']}{$seo['statis']}{$seo['custom']}</em>
+
+    </div>
+
+
+
+    <!-- /.footer end !-->
+
+</div>
+
+
+
+<div class="goTop"><img src="/Public/home/images/goTop.png" alt=""></div>
+
+
+
+<script type="text/javascript" src="/Public/home/js/jquery.js"></script>
+
+<script type="text/javascript" src="/Public/home/js/slick.js"></script>
+
+<script type="text/javascript" src="/Public/home/js/jquery.fullPage.js"></script>
+
+<script type="text/javascript" src="/Public/home/js/lib.js"></script>
+
+<script>
+
+    $(function(){
+
+
+
+        $('#fullPage').fullpage({
+
+            anchors: ['section-1', 'section-2', 'section-3','section-4','section-5','section-6'],
+
+            scrollingSpeed:500,
+
+            'navigation': true,
+
+            menu: '#menu',
+
+			normalScrollElements: '.index_about_txt',
+
+            afterLoad: function(anchorLink, index){
+
+                var winW = $(window).width();
+
+                if(winW > 1199){
+
+                    $(".section").eq(index-1).find('[ani*="animated"]').each(function(){
+
+                        var _this = $(this);
+
+                        var _class = $(this).attr('ani');
+
+                        var _time = $(this).attr('ani-time');
+
+                        setTimeout(function(){
+
+                            _this.stop().addClass(_class);
+
+                        },_time);
+
+                    });
+
+                    $(".section").not(".active").find('[ani*="animated"]').each(function(){
+
+                        var _this = $(this);
+
+                        var _class = $(this).attr('ani');
+
+                        _this.removeClass(_class);
+
+                        // _this.css('opacity',0);
+
+                    });
+
+                }
+
+
+
+            }
+
+        });
+
+
+
+        $('.index_banner,.index_banner_m').slick({
+
+            autoplay:true,
+
+            autoplaySpeed:3500,
+
+            arrows:false,
+
+            dots:true
+
+        })
+
+
+
+        // On before slide change
+
+        // $('.index_banner').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+
+        //     var el = $('.index_banner .item').eq(nextSlide).find('img'),
+
+        //         _class = el.attr("ani");
+
+        //     $(".index_banner .item img").removeAttr("class");
+
+        //     console.log(el);
+
+        //     // $(el).addClass(_class);
+
+        // });
+
+
+
+        // 回首屏
+
+        $(".goTop").click(function(){
+
+            $("#fp-nav li").eq(0).find('a').click();
+
+        });
+
+
+
+        // function autoScrolling(){
+
+        //     var $ww = $(window).width();
+
+        //     if($ww < 1200){
+
+        //         $.fn.fullpage.setAutoScrolling(false);
+
+        //     } else {
+
+        //         $.fn.fullpage.setAutoScrolling(true);
+
+        //     }
+
+        // }
+
+        // autoScrolling();
+
+
+
+        function opa(){
+
+            var winW = $(window).width();
+
+            if (! (/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+
+                if(winW > 1199){
+
+                    $('[ani*="animated"]').css('opacity',0);
+
+                }else{
+
+                    $('[ani*="animated"]').css('opacity',1);
+
+                }
+
+            };
+
+        }
+
+        opa();
+
+
+
+        // $(window).resize(function(){
+
+        //     autoScrolling();
+
+        //     opa();
+
+        // });
+
+    });
+
+</script>
+
+</body>
+
+</html>
